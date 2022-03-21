@@ -10,28 +10,37 @@
         android:id="@+id/button_toast"
         android:layout_width="478dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/design_default_color_on_primary"
         android:onClick="showToast"
         android:text="@string/button_label_toast"
         android:textColor="#F1EEEE"
         android:textColorHighlight="#9E2323"
         android:textSize="60sp"
-        tools:ignore="MissingConstraints,TextContrastCheck,UsingOnClickInXml"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintBottom_toTopOf="@+id/show_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="MissingConstraints,TextContrastCheck,UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_count"
         android:layout_width="479dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/design_default_color_on_primary"
         android:onClick="countUp"
         android:text="@string/button_label_count"
         android:textAllCaps="true"
         android:textSize="60sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_toast"
+        app:layout_constraintBottom_toTopOf="@+id/show_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toEndOf="@+id/button_toast"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <TextView

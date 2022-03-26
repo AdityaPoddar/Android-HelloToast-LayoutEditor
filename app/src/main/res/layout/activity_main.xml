@@ -1,62 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
-    <!--    linear-->
-    <!--linear mai orientation added-->
-    <!--    linear_layout_weight 1 is added-->
+
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/design_default_color_primary"
+        android:background="@color/colorPrimary"
         android:onClick="showToast"
         android:text="@string/button_label_toast"
-        android:textColor="#F1EEEE"
-        android:textColorHighlight="#9E2323"
-        android:textSize="34sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        tools:ignore="UsingOnClickInXml" />
-
-    <!--     L   android:layout_weight="1"-->
     <TextView
         android:id="@+id/show_count"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_toast"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_alignParentStart="true"
-
-        android:background="#FFEB3B"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginEnd="8dp"
+        android:background="@color/yellow"
+        android:gravity="center"
         android:text="@string/count_initial_value"
-        android:textAllCaps="false"
-        android:textColor="#0D47A1"
-        android:textSize="160sp"
-        android:textStyle="bold" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_count"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/show_count"
-        android:background="@color/design_default_color_primary"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorPrimary"
         android:onClick="countUp"
         android:text="@string/button_label_count"
-        android:textAllCaps="true"
-        android:textSize="34sp"
-        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/show_count"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        tools:ignore="UsingOnClickInXml" />
-</RelativeLayout>
+        android:layout_marginBottom="8dp"
+        android:background="@color/gray"
+        android:onClick="resetZero"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_toast"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

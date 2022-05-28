@@ -29,7 +29,7 @@ Rearrange the views in the main layout to be relative to each other.
 
 ## Relative Layout
 
-![Task1n2](https://user-images.githubusercontent.com/50478966/170829194-bc244888-471a-4277-b018-20e315140526.png)
+(https://user-images.githubusercontent.com/50478966/170829194-bc244888-471a-4277-b018-20e315140526.png)
 
 ## Linear Layout
 
